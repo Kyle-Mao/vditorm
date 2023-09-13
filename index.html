@@ -12,7 +12,7 @@
 <style>
     html,
     body {
-        height: 95%;
+        height: 98%;
         background-color: #1E2125;
     }
 
@@ -29,9 +29,9 @@
 </style>
 
 <body>
-    <div id="blank">
+    <!-- <div id="blank">
         <h1>Markdown Editor Online</h1>
-    </div>
+    </div> -->
     <div id="vditor"></div>
     <script>
         // 第一个参数是容器的id，必填
@@ -49,7 +49,7 @@
                     current: 'dark'
                 }
             },
-            height: window.innerHeight / 2,
+            height: '100%',
             toolbar: [
                 'headings',
                 'bold',
@@ -61,10 +61,13 @@
                 {
                     name: 'more',
                     toolbar: [
+                        'line',
                         'table',
                         'list',
-                        'ordered-list',
+                        'ordered-list',                        
                         'insert-after',
+                        'outline',
+                        'export',
                         'fullscreen', 
                         'edit-mode',
                     ],
