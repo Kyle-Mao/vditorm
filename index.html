@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Editor</title>
+    <link rel="stylesheet" href="https://unpkg.com/vditor/dist/index.css" />
+    <script src="https://unpkg.com/vditor/dist/index.min.js"></script>
+    <!-- <script src="https://unpkg.com/vditor/dist/method.min.js"></script> -->
+</head>
+<style>
+    html,
+    body {
+        height: 95%;
+        background-color: #1E2125;
+    }
+
+    #blank {
+        background-color: #1E2125;
+        height: 50px;
+        font-weight: lighter;
+        color: grey;
+    }
+
+    #vditor {
+        margin-top: 5px;
+    }
+</style>
+
+<body>
+    <div id="blank">
+        <h1>Markdown Editor Online</h1>
+    </div>
+    <div id="vditor"></div>
+    <script>
+        // 第一个参数是容器的id，必填
+        // 第二个参数是配置对象，可选
+        new Vditor('vditor', {
+            theme: 'dark',
+            toolbarConfig: {
+                pin: true
+            },
+            counter: {
+                enable: true
+            },
+            preview:{
+                theme:{
+                    current:'dark'
+                }
+            },
+            height: window.innerHeight / 2,
+            toolbar: [
+                'headings',
+                'bold',
+                'italic',
+                'quote',
+                'undo',
+                'redo',
+                'edit-mode',
+                {
+                    name: 'more',
+                    toolbar: [
+                        'table',
+                        'list',
+                        'ordered-list', 
+                        'insert-after',
+                        'fullscreen',
+                    ],
+                },
+            ],
+        })
+    </script>
+</body>
